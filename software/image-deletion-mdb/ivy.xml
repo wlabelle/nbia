@@ -17,6 +17,10 @@
 
   <dependencies>
 
+    <dependency org="javax.mail"
+		name="mail"
+		rev="1.4"
+		conf="compile->master;runtime->master"/>
 
     <dependency org="jboss.jbossas.core-libs"
                 name="jboss-j2ee"

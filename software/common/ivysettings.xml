@@ -22,6 +22,16 @@
       </filesystem>
        -->
 
+      <url name="deprecated-ncicb-cbiit-ivy-repo" m2compatible="false">
+	<ivy pattern="https://ncisvn.nci.nih.gov/svn/deprecated-cbiit-ivy-repo/trunk/[organisation]/[module]/[revision]/ivy.xml"/>
+	<artifact pattern="https://ncisvn.nci.nih.gov/svn/deprecated-cbiit-ivy-repo/trunk/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"/>
+      </url>
+
+      <url name="deprecated-ncicb-ivy-repo" m2compatible="false">
+	<ivy pattern="https://ncisvn.nci.nih.gov/svn/deprecated-ivy-repo/trunk/[organisation]/[module]/[revision]/ivy.xml"/>
+	<artifact pattern="https://ncisvn.nci.nih.gov/svn/deprecated-ivy-repo/trunk/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"/>
+      </url>
+
       <!-- Then, use the external repository -->
 
       <ibiblio name="cbiit-maven-mirror"
@@ -40,12 +50,15 @@
                root="https://ncimvn.nci.nih.gov/nexus/content/repositories/jboss"
                changingPattern=".*SNAPSHOT"/>
 
-      <!--
-			<url name="ncicb-ivy-repo" m2compatible="false">
-				<ivy pattern="http://gforge.nci.nih.gov/svnroot/commonlibrary/trunk/ivy-repo/[organisation]/[module]/[revision]/ivy.xml"/>
-				<artifact pattern="http://gforge.nci.nih.gov/svnroot/commonlibrary/trunk/ivy-repo/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]"/>
-			</url>
-      -->
+      <ibiblio name="cbiit-maven"
+               m2compatible="true"
+               root="https://ncimvn.nci.nih.gov/nexus/content/groups/group_CBIIT_hosted_maven_repos"
+               changingPattern=".*SNAPSHOT"/>
+
+      <ibiblio name="mirtl-maven-repo"
+               m2compatible="true"
+               root="https://raw.github.com/wlabelle/mirtl-maven-repo/master/releases" />
+
       <!-- begin ncia specific stuff -->
       <filesystem name="nbia-domain-resolver" local="true">
         <artifact pattern="${nbia.basedir}/target/dist/exploded/nbia-domain/[module].[ext]" />

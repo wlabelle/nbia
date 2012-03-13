@@ -109,7 +109,7 @@
   </target>
 
 
-  <target name="run" depends="dist, test, inspect, -post-clean" description="Default project target" />
+  <target name="run" depends="dist, -post-clean" description="Default project target" />
 
   <target name="-post-clean" depends="post-clean-test" description="Performs necessary clean-up after a build">
     <delete dir="${assembly.dir}" quiet="false" />

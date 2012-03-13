@@ -30,7 +30,7 @@
 
   <dependencies>
     <dependency org="junit" name="junit" rev="4.4" conf="test->default"/>
-    <dependency org="cobertura" name="cobertura" rev="1.9.3-asmhack" conf="test->default"/>
+    <dependency org="cobertura" name="cobertura" rev="1.9.3-asmhack" conf="test->runtime"/>
     <dependency org="javancss" name="javancss" rev="29.50" conf="test->default"/>
     <dependency org="checkstyle" name="checkstyle" rev="4.4" conf="test->default"/>
     <dependency org="checkstyle" name="checkstyle-optional" rev="4.4" conf="test->default"/>
@@ -82,11 +82,11 @@
     <dependency org="ncicb"
                 name="ivi-core"
                 rev="1.2"
-                conf="*->default"/>
+                conf="*->master"/>
     <dependency org="globus"
                 name="wss4j"
                 rev="noversion"
-                conf="*->default"/>
+                conf="*->master"/>
     <dependency org="commons-httpclient"
                 name="commons-httpclient"
                 rev="3.0.1"
@@ -117,11 +117,11 @@
     <dependency org="globus"
                 name="jcogfx"
                 rev="noversion"
-                conf="*->default"/>
+                conf="*->runtime"/>
     <dependency org="globus"
                 name="wss4j"
                 rev="noversion"
-                conf="*->default"/>
+                conf="*->runtime"/>
 
     <dependency org="globus"
                 name="jcog"
