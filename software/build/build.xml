@@ -346,7 +346,7 @@ $HeadURL: https://ncisvn.nci.nih.gov/svn/nbia/trunk/software/build/build.xml $
      <!--
     <delete dir="${application.base.path}/${wscore.relative.dir}"/>
     -->
-    <validate-pre-build
+    <validate-pre-build wscore.download.url="${ws-core.src.url}" wscore.relative.dir="${wscore.relative.dir}"
       />
 
     <!-- i dont understand what is going on with globus... this may have something to do
@@ -809,7 +809,10 @@ $HeadURL: https://ncisvn.nci.nih.gov/svn/nbia/trunk/software/build/build.xml $
       </fileset>
     </delete>
 
-    <gui-installer-prep/>
+    <gui-installer-prep izpack.binary.uri="${izpack.binary.uri}" izpack-custom.svn.url="${izpack-custom.svn.url}"
+			izpack.binary.name="${izpack.binary.name}" izpack.binary.file="${izpack.binary.file}"
+			ant.binary.file="${ant.binary.file}" ant.binary.url="${ant.binary.url}"
+			ant.binary.dir="${ant.binary.dir}" />
 
     <ant inheritAll="false" inheritRefs="false"
       antfile="install.xml"
